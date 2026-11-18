@@ -1,0 +1,52 @@
+<!DOCType html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin – Gaspillage et impact</title>
+  <link rel="stylesheet" href="impact_style.css">
+  <script src="impact_javascript.js"></script>
+</head>
+<body class="back">
+<div class="wrap">
+  <aside class="side">
+    <div class="brand">● 9rib Lik</div>
+    <a href="impact_dashboard.html" class="on">Tableau de bord</a>
+    <a href="back_gaspillage_form.html">Ajouter une forme de gaspillage</a>
+    <a href="back_impact_form.html">Ajouter un impact</a>
+    <a href="front_gaspillage_form.html">Retour au site public</a>
+    <div class="foot"><div>admin</div><a href="#">Se déconnecter</a></div>
+  </aside>
+  <div class="main">
+    <header class="top"><h1>Gaspillage et impact</h1><span class="env">BACKOFFICE</span></header>
+    <div class="content">
+      <p class="intro">Tous les surplus signalés et l'impact écologique qu'ils ont produit.</p>
+      <div class="stats">
+        <div class="stat"><span>Gaspillage évité</span><b>1 kg</b></div>
+        <div class="stat"><span>CO₂ évité</span><b>4 kg</b></div>
+        <div class="stat"><span>Gaspillage en attente</span><b>2 kg</b></div>
+      </div>
+      <section class="card">
+        <h2 class="card-title">Gaspillages</h2>
+        <div class="bar"><input type="search" class="search" placeholder="Rechercher un gaspillage..."><a class="btn" href="back_gaspillage_form.html">Ajouter un gaspillage</a></div>
+        <table>
+        <thead><tr><th>ID</th><th>Quantité (kg)</th><th>Signalé le</th><th>Date limite</th><th>Statut</th><th>Actions</th></tr></thead>
+        <tr><td>1</td><td>40</td><td>2026-11-10</td><td>2026-11-14</td><td><span class="badge">Vendu</span></td><td class="actions"><a class="btn sm sec" href="back_gaspillage_form.html?id=1">Modifier</a><a class="btn sm del" onclick="return confirm('Supprimer ce gaspillage?')">Supprimer</a></td></tr>
+        <tr><td>2</td><td>25</td><td>2026-11-15</td><td>2026-11-20</td><td><span class="badge warn">En attente</span></td><td class="actions"><a class="btn sm sec" href="back_gaspillage_form.html?id=2">Modifier</a><a class="btn sm del" onclick="return confirm('Supprimer ce gaspillage?')">Supprimer</a></td></tr>
+        <tr><td>3</td><td>12</td><td>2026-11-05</td><td>2026-11-09</td><td><span class="badge off">Périmé</span></td><td class="actions"><a class="btn sm sec" href="back_gaspillage_form.html?id=3">Modifier</a><a class="btn sm del" onclick="return confirm('Supprimer ce gaspillage?')">Supprimer</a></td></tr>
+        </table>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Impacts</h2>
+        <div class="bar"><input type="search" class="search" placeholder="Rechercher un impact..."><a class="btn" href="back_impact_form.html">Ajouter un impact</a></div>
+        <table>
+        <thead><tr><th>ID</th><th>Quantité sauvée (kg)</th><th>CO₂ évité (kg)</th><th>Type</th><th>Date</th><th>Gaspillage n°</th><th>Actions</th></tr></thead>
+        <tr><td>1</td><td>40</td><td>68</td><td>Redistribution</td><td>2026-11-12</td><td>1</td><td class="actions"><a class="btn sm sec" href="back_impact_form.html?id=1">Modifier</a><a class="btn sm del" onclick="return confirm('Supprimer cet impact?')">Supprimer</a></td></tr>
+        <tr><td>2</td><td>88</td><td>146</td><td>Livraison locale</td><td>2026-11-13</td><td>1</td><td class="actions"><a class="btn sm sec" href="back_impact_form.html?id=2">Modifier</a><a class="btn sm del" onclick="return confirm('Supprimer cet impact?')">Supprimer</a></td></tr>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

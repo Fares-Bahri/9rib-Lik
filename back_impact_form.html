@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin – Impact</title>
+  <link rel="stylesheet" href="impact_style.css">
+  <script src="impact_javascript.js"></script>
+</head>
+<body class="back">
+<div class="wrap">
+  <aside class="side">
+    <div class="brand">● 9rib Lik</div>
+    <a href="impact_dashboard.html">Tableau de bord</a>
+    <a href="back_gaspillage_form.html">Ajouter une forme de gaspillage</a>
+    <a href="back_impact_form.html" class="on">Ajouter un impact</a>
+    <a href="front_gaspillage_form.html">Retour au site public</a>
+    <div class="foot"><div>admin</div><a href="#">Se déconnecter</a></div>
+  </aside>
+  <div class="main">
+    <header class="top"><h1>Ajouter ou modifier un impact</h1><span class="env">BACKOFFICE</span></header>
+    <div class="content">
+      <section class="card">
+        <p class="intro">Chaque impact est rattaché à un gaspillage.</p>
+        <form class="f" action="" method="post">
+          <label>Identifiant <small>Généré automatiquement</small>
+            <input type="number" id="id_impact" name="impact" readonly placeholder="Auto">
+          </label>
+          <div class="duo">
+            <label>Quantité sauvée (kg)
+              <input type="number" id="id_quantite_sauvee" name="quantite_sauvee" min="0.1" step="0.1" required>
+            </label>
+            <label>CO₂ évité (kg)
+              <input type="number" id="id_CO2_evite" name="CO2_evite" min="0" step="0.1" required>
+            </label>
+          </div>
+          <label>Type d'impact
+            <select name="type_impact" required>
+              <option value="">Choisir un type</option>
+              <option value="redistribution">Environmental</option>
+              <option value="livraison_locale">Alimentaire</option>
+              <option value="transformation">Environmental et Alimentaire</option>
+            </select>
+          </label>
+          <div class="duo">
+            <label>Date de l'impact
+              <input type="date" id="date_impact" name="date_impact" required>
+            </label>
+            <label>Gaspillage concerné
+              <select name="id_gaspillage" required>
+                <option value="">Choisir l'identifiant</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </label>
+          </div>
+          <div class="actions">
+            <button class="btn" type="submit">Enregistrer l'impact</button>
+            <button class="btn sec" type="reset">Annuler</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

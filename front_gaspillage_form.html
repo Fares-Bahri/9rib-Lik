@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signaler un surplus</title>
+  <link rel="stylesheet" href="impact_style.css">
+  <script src="impact_javascript.js"></script>
+</head>
+<body class="front">
+<nav class="nav">
+  <b>9rib Lik</b>
+  <div><a href="front_gaspillage_form.html" aria-current="page">Signaler un gaspillage</a></div>
+</nav>
+<section class="hero">
+  <h1>Signaler un surplus</h1>
+  <p>Vous avez des produits que vous ne pourrez pas vendre à temps? Indiquez la quantité et la date limite. Les consommateurs proches pourront les acheter avant qu'ils ne soient perdus.</p>
+</section>
+<form class="formcarte" action="" method="post">
+  <label>Quantité menacée (kg)
+    <input type="number" id="id_quantite_gaspillage" name="quantite_gaspillage" min="0.1" step="0.1" required>
+  </label>
+  <label>Date limite
+    <small>Dernier jour où les produits peuvent encore être vendus.</small>
+    <input type="date" id="date_limite" name="date_limite" required>
+  </label>
+  <input type="hidden" id="date_signalement" name="date_signalement">
+  <input type="hidden" id="statut" name="statut" value="en_attente">
+  <div class="actions">
+    <button type="submit">Signaler le surplus</button>
+    <button type="reset">Effacer</button>
+  </div>
+</form>
+<footer>9rib Lik</footer>
+</body>
+</html>
